@@ -1,9 +1,12 @@
 package com.arapeak.testeduhackapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Toast;
 
 import com.arapeak.model.ChooseTypeAccount;
@@ -20,6 +23,9 @@ public class ChooseTypeAccountActivity extends AppCompatActivity  implements Ada
     ChooseTimeAdapter chooseTimeAdapter;
     ChooseTimeAdapter chooseTimeAdapter2;
     ChooseTimeAdapter chooseTimeAdapter3;
+
+
+    CardView card_confirm;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +34,7 @@ public class ChooseTypeAccountActivity extends AppCompatActivity  implements Ada
         recycleView_choose_time_type_account= findViewById(R.id.recycleView_choose_time_type_account);
         recycleView_choose_day_type_account= findViewById(R.id.recycleView_choose_day_type_account);
         recycleView_skill= findViewById(R.id.recycleView_skill);
+        card_confirm= findViewById(R.id.card_confirm);
 
 
 
@@ -77,6 +84,12 @@ public class ChooseTypeAccountActivity extends AppCompatActivity  implements Ada
 
 
 
+        card_confirm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),AvailableTranersActivity.class));
+            }
+        });
 
     }
 

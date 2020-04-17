@@ -9,9 +9,13 @@
     tools:context=".ChooseTypeAccountActivity">
 
     <ScrollView
-        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -26,11 +30,10 @@
                 android:layout_marginTop="36dp"
                 android:text="اختر نوع الحساب"
                 android:textColor="#1478A4"
-                android:textSize="24sp"
+                android:textSize="20sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
-
 
 
             <androidx.recyclerview.widget.RecyclerView
@@ -55,7 +58,8 @@
                 android:layout_marginTop="10dp"
                 android:text="الوقت المناسب لك"
                 android:textColor="#1478A4"
-                android:textSize="24sp"
+                android:textSize="20sp"
+
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/recycleView_choose_type_account" />
@@ -83,7 +87,8 @@
                 android:layout_marginTop="10dp"
                 android:text="الأيام المناسبة لك"
                 android:textColor="#1478A4"
-                android:textSize="24sp"
+                android:textSize="20sp"
+
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/recycleView_choose_time_type_account" />
@@ -110,7 +115,8 @@
                 android:layout_marginStart="16dp"
                 android:text="المهارة"
                 android:textColor="#1478A4"
-                android:textSize="24sp"
+                android:textSize="20sp"
+
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/recycleView_choose_day_type_account" />
@@ -131,9 +137,10 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/card_confirm"
-                android:layout_marginTop="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:layout_marginBottom="60dp"
                 app:cardBackgroundColor="#1478A4"
                 app:cardCornerRadius="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -157,6 +164,13 @@
 
 
             </androidx.cardview.widget.CardView>
+
+            <View
+                android:layout_marginTop="30dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:visibility="invisible"
+                app:layout_constraintTop_toBottomOf="@+id/card_confirm" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
